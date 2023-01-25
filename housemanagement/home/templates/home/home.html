@@ -1,0 +1,131 @@
+{% load static %}
+<!Doctype html>
+<head>
+<title>Home</title>
+<head>
+<style>
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position:fixed;
+  width:100%;
+  display:block;
+  top:0;
+  left:0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family:candara;
+}
+.topnav p {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family:verdana;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Main content styling */
+.main {
+  padding: 16px;
+  margin-top: 80px;
+   
+}
+.column {
+  float: left;
+  width: 25%;
+ 
+  left:10px;
+}
+.column img{
+width: 75%;
+}
+
+/* See details button styling */
+button{
+padding:8px;
+background-color:#3380cc;
+border:0px;
+border-radius:2px;
+color:white;
+font-family:verdana;
+}
+</style>
+<body>
+<div class="topnav" id="myTopnav">
+<p>House Rental Management System</p>
+  <a href=" ">Home</a>
+  <a href=" ">Houses</a>
+  <a href=" ">Owners</a>
+  <a href=" ">Tenants</a>
+   <a href=" ">Booking</a>
+ 
+  <a style="float:right;" href=" ">Signout</a>
+  
+  
+</div>
+
+<div class="main">
+<h3 style="font-family:arial">Welcome, Contel</h3>
+</div>
+<div class="column">
+      <img class="demo" src={% static "avatar3.png" %} alt=" ">
+	   <div class="container">
+        <h2>Houses</h2>
+        
+        <p>This page contains details of all houses</p>
+       
+        <a href=" "><button class="button">See details >></button></a>
+      </div>
+    </div>
+<div class="column">
+      <img class="demo" src={% static "avatar3.png" %} alt=" ">
+	   <div class="container">
+        <h2>Owners</h2>
+        
+        <p>This page contains details of all Owners</p>
+       
+        <a href=" "><button class="button">See details >></button></a>
+      </div>
+    </div>
+	<div class="column">
+      <img class="demo" src={% static "avatar3.png" %}  alt=" ">
+	   <div class="container">
+        <h2>Tenants</h2>
+        
+        <p>This page contains details of all Tenants</p>
+       
+        <a href=" "><button class="button">See details >></button></a>
+      </div>
+    </div>
+	<div class="column">
+      <img class="demo" src={% static "avatar3.png" %}  alt=" ">
+      
+	   <div class="container">
+        <h2>Booking</h2>
+        
+        <p>This page contains details of all bookings</p>
+       
+        <a href=" "><button class="button">See details >></button></a>
+      </div>
+    </div>
+</body>
+</html>

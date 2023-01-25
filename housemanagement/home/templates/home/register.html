@@ -1,0 +1,104 @@
+<!Doctype html>
+<head>
+<title>Sign in?</title>
+<head>
+<style>
+body,html {
+top:0;
+  height: 100%;
+   box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("media/hotel.jpg");
+
+  /* Control the height of the image */
+  min-height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+   right:35%;
+   left:35%;
+   top:25%;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+  #text {
+  width: 270px;
+  height:10px;
+  padding: 15px;
+  margin: 5px 0 18px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+
+/* Set a style for the submit button */
+.btn {
+
+  background-color: #3380cc;
+  color: white;
+  left:20px;
+  padding: 12px 12px;
+  border:0;
+  cursor: pointer;
+  width: 300px;
+  font-size:16px;
+  }
+  .btn2 {
+  
+  background-color: lightgreen;
+  color: white;
+  left:20px;
+  padding: 12px 12px;
+  border:0;
+  cursor: pointer;
+  width: 300px;
+  font-size:12px;
+  }
+  /*select option */
+  #select{
+  width: 300px;
+  height:10px;
+  padding: 15px;
+  margin: 5px 0 18px 0;
+  border: none;
+  background: #f1f1f1;
+}
+  
+</style>
+<body>
+ <div class="bg-img">
+  <form action="" method="post" class="container">
+    <h1>Sign in Here</h1>
+
+    <label for="username">Username :</label><br/>
+    <input id="text" type="text" placeholder="Enter username" name="username" required><br/>
+
+    <label for="email">Email :</label><br/>
+    <input id="text" type="text" placeholder="Enter Email" name="email" required><br/>
+
+    <label for="password">Password :</label><br/>
+    <input id="text" type="password" placeholder="Enter Password" name="password" required><br/>
+
+    <button type="submit" class="btn">Register</button><br/><br/> 
+    <p class="text-center">If you already have an account, <a href="{% url 'login_request' %}">login</a> instead.</p>
+	 </form>
+    
+ 
+</div> 
+</body>
