@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.shortcuts import render, redirect
 from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from .models import House
 
 
 # Create your views here.
@@ -50,3 +51,16 @@ def logout_request(request):
 	logout(request)
 	messages.info(request, "You have successfully logged out.") 
 	return redirect('home')#home 
+
+#House list
+def house_list(request):
+     houses = House.objects.all(available=True)
+
+     return render(request,'home/house_list.html',{'houses':houses})
+
+
+def house_detail(request, id, slug):
+     house = get_object_or_404(House,
+    id=id,slug=slug, available=True)
+     return render(request,'home/detail.html',
+     {'house': house})
